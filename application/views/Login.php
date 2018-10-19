@@ -23,8 +23,8 @@
 		<h3 class="text-center">Login To HotelU</h3>
 		<div class="col-md-5 mx-auto">
 			<div class="form-group">
-				<label for="username">Email</label>
-			   <center><input class="form-control" type="text" name="username" placeholder="Email" required/></center> 
+				<label for="email">Email</label>
+			   <center><input class="form-control" type="text" name="email" placeholder="Email" required/></center> 
 			  </div>
        		<div class="form-group">
 				<label for="password">Password</label>
