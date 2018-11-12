@@ -94,7 +94,7 @@
 <?php 
 //$this->load->view('footer'); 
 if($this->session->flashdata('message') == 'Error Login'){
-  echo "<script>alert('Username or Password is Incorrect.');</script>";
+  echo "<script>alert('Email or Password is Incorrect.');</script>";
 }
 ?>
 </html>
