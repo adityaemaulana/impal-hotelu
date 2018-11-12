@@ -9,73 +9,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	
-	<style>
-		.coverBg{
-			background-image: url(backhotel.png);
-			background-repeat: no-repeat;
-			
-			width: 100%;
-			height: 100%;
-			background-size: 100%;
-		}
-		
-		h3{
-			margin-top: 2%;
-			margin-bottom: 5%;
-			font-size: 40px;
-			font-family: Cusive,monospace;
-			color: #0BD3D5;
-			font-weight: bold;
-		}
-		
-		.btn{
-			background-color: #0BD3D5;
-			color: white;
-			margin-top: 5%;
-		}
-		
-		.form-group{
-			color: black;
-			font-size: 25px;
-			font-family: Cusive,monospace;
-			margin-top: 8%;
-		}
-		
-		.footer{
-			background: #2D2D2D;
-			color: white;
-			margin-top: 3%;
-			padding-top: 50px;
-			padding-bottom: 50px;
-			text-align: left;
-		}
-		
-		h5{
-			color: #0BB59D;
-			font-family: Arial Rounded MT Bold;
-		}
-		
-		.atas{
-			margin-top: 1%;
-			margin-left: 4%;
-		}
-		
-		.logoFol{
-			height: 25px;
-			margin-left: 12%;
-		}
-		
-		.logoPay{
-			margin-left: 5%;
-			margin-top: 4%;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/Register.css">
 </head>
 
 <body>
 	
 	<div class="container ">
-		<img class="coverBg" src="backhotel.png">	
+		<img class="coverBg" src="<?php echo base_url();?>image/backhotel.png">	
 	</div>
 	
 	<div class="container">
@@ -83,6 +23,7 @@
 		
 		<div class="row">
 			<div class="col-md-5">
+			<form action="<?php echo site_url('C_Regis/register'); ?>" method="POST">
 				<div class="form-group">
 					<label for="username">Username</label>
 				   <input class="form-control" type="text" name="username" placeholder="Username" required/>
@@ -111,16 +52,17 @@
 					<label for="umur">Age</label>
 					<input class="form-control" type="text" name="umur" placeholder="Age is just a number" />
         		</div>
+			</form>
 			</div>
 			
 			
 			<div class="col-md-5 my-auto mx-auto">
 				<h3 class="text-center">Register To HotelU</h3>
-				<center><img src="cash-register.png"></center>
+				<center><img src="<?php echo base_url();?>image/cash-register.png"></center>
        			<center><button type="submit" class="btn btn-lg btn-info">Register</button></center>
 				<center>
 					<p>Sudah Punya Akun? 
-           				<a href="#">Login disini.</a>
+           				<a href="<?php echo site_url('C_Akun/index') ?>">Login disini.</a>
           			</p>
 				</center>
 			</div>
@@ -148,15 +90,15 @@
 					<center><h5>Follow Us</h5></center>
 					
 					<a href="http://facebook.com/">
-						<img src="facebook.png" class="logoFol" alt="Fb">
+						<img src="<?php echo base_url();?>image/facebook.png" class="logoFol" alt="Fb">
 					</a>
 					
-					<a href="http://facebook.com/">
-						<img src="instagram.png" class="logoFol" alt="Ig">
+					<a href="http://instagram.com/">
+						<img src="<?php echo base_url();?>image/instagram.png" class="logoFol" alt="Ig">
 					</a>
 					
-					<a href="http://facebook.com/">
-						<img src="twitter.png" class="logoFol" alt="Tw">
+					<a href="http://twitter.com/">
+						<img src="<?php echo base_url();?>image/twitter.png" class="logoFol" alt="Tw">
 					</a>
 					
             	</div>
@@ -164,10 +106,10 @@
 				<div class="col-sm-2 atas">
 					<center><h5>Payment</h5></center>
 					
-					<img src="if_BCA_2425807.png" class="logoPay" alt="BCA">
-					<img src="if_BNI_2425812.png" class="logoPay" alt="BCA">
-					<img src="if_BRI_2425806.png" class="logoPay" alt="BCA">
-					<img src="if_Mandiri_2425804.png" class="logoPay"alt="BCA">
+					<img src="<?php echo base_url();?>image/if_BCA_2425807.png" class="logoPay" alt="BCA">
+					<img src="<?php echo base_url();?>image/if_BNI_2425812.png" class="logoPay" alt="BNI">
+					<img src="<?php echo base_url();?>image/if_BRI_2425806.png" class="logoPay" alt="BRI">
+					<img src="<?php echo base_url();?>image/if_Mandiri_2425804.png" class="logoPay"alt="MANDIRI">
 					
             	</div>
 			</div>
