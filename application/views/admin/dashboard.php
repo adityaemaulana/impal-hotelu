@@ -7,27 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/plugins/images/favicon.png">
-    <title>Ample Admin Template - The Ultimate Multipurpose admin template</title>
+    <link rel="icon" type="image/png'?>" sizes="16x16" href="<?php echo base_url().'/assets/plugins/images/favicon.png'?>">
+    <title>Hotelu - Hotel Management System</title>
     <!-- Bootstrap Core CSS -->
-    <link href="./assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/bootstrap/dist/css/bootstrap.min.css'?>" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="./assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css'?>" rel="stylesheet">
     <!-- toast CSS -->
-    <link href="./assets/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/toast-master/css/jquery.toast.css'?>" rel="stylesheet">
     <!-- morris CSS -->
-    <link href="./assets/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/morrisjs/morris.css'?>" rel="stylesheet">
     <!-- chartist CSS -->
-    <link href="./assets/plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="./assets/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/chartist-js/dist/chartist.min.css'?>" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css'?>" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="./assets/css/animate.css" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/css/animate.css'?>" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/css/style.css'?>" rel="stylesheet">
     <!-- color CSS -->
-    <link href="./assets/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/css/colors/default.css'?>" id="theme" rel="stylesheet">
     <!-- my custom CSS -->
-    <link href="./assets/css/admin-style.css" id="theme" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/css/admin-style.css'?>" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,10 +58,10 @@
                     <!-- Logo -->
                     <a class="logo" href="index.html">
                         <!-- Logo icon image, you can use font-icon also --><b>
-                        <!--This is dark logo icon--><img src="./assets/plugins/images/admin-logo.png" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="./assets/plugins/images/admin-logo.png" alt="home" class="admin-logo" />
+                        <!--This is light logo icon--><img src="<?php echo base_url().'/assets/plugins/images/admin-logo-hotelu.png'?>" alt="home" class="admin-logo"/>
                      </b>
                         <!-- Logo text image you can use text also --><span class="hidden-xs">
-                        <!--This is dark logo text--><img src="./assets/plugins/images/admin-text.png" alt="home" class="dark-logo" /><!--This is light logo text--><img src="./assets/plugins/images/admin-text-dark.png" alt="home" class="light-logo" />
+                        <!--This is light logo text--><img src="<?php echo base_url().'/assets/plugins/images/admin-text-dark.png'?>" alt="home" class="light-logo"/>
                      </span> </a>
                 </div>
                 <!-- /Logo -->
@@ -71,7 +71,7 @@
                             <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"> <img src="./assets/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Steave</b></a>
+                        <a class="profile-pic" href="#"> <img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">AdityaEM</b></a>
                     </li>
                 </ul>
             </div>
@@ -90,33 +90,28 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        <a href="<?php echo site_url('Dashboard_C')?>" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Kamar</a>
+                        <a href="<?php echo site_url('MKamar_C')?>" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Kamar</a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Tamu</a>
+                        <a href="<?php echo site_url('MStaff_C')?>" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Staff</a>
                     </li>
                     <li>
-                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Order</a>
+                        <a href="fontaw" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Icons</a>
                     </li>
                     <li>
-                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
+                        <a href="map-g" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
                     </li>
                     <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Blank Page</a>
+                        <a href="aaa" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Blank Page</a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Error 404</a>
+                        <a href="aaa" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Error 404</a>
                     </li>
-
                 </ul>
-                <div class="center p-20">
-                     <a href="https://wrappixel.com/templates/ampleadmin/" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">Upgrade to Pro</a>
-                 </div>
             </div>
-            
         </div>
         <!-- ============================================================== -->
         <!-- End Left Sidebar -->
@@ -130,7 +125,6 @@
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Dashboard</h4> </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <a href="https://wrappixel.com/templates/ampleadmin/" target="_blank" class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Upgrade to Pro</a>
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
                         </ol>
@@ -287,7 +281,7 @@
                             <h3 class="box-title">Recent Comments</h3>
                             <div class="comment-center p-t-10">
                                 <div class="comment-body">
-                                    <div class="user-img"> <img src="./assets/plugins/images/users/pawandeep.jpg" alt="user" class="img-circle">
+                                    <div class="user-img"> <img src="<?php echo base_url().'/assets/plugins/images/users/pawandeep.jpg'?>" alt="user" class="img-circle">
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Pavan kumar</h5><span class="time">10:20 AM   20  may 2016</span>
@@ -295,7 +289,7 @@
                                     </div>
                                 </div>
                                 <div class="comment-body">
-                                    <div class="user-img"> <img src="./assets/plugins/images/users/sonu.jpg" alt="user" class="img-circle">
+                                    <div class="user-img"> <img src="<?php echo base_url().'/assets/plugins/images/users/sonu.jpg'?>" alt="user" class="img-circle">
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Sonu Nigam</h5><span class="time">10:20 AM   20  may 2016</span>
@@ -303,7 +297,7 @@
                                     </div>
                                 </div>
                                 <div class="comment-body b-none">
-                                    <div class="user-img"> <img src="./assets/plugins/images/users/arijit.jpg" alt="user" class="img-circle">
+                                    <div class="user-img"> <img src="<?php echo base_url().'/assets/plugins/images/users/arijit.jpg'?>" alt="user" class="img-circle">
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Arijit singh</h5><span class="time">10:20 AM   20  may 2016</span>
@@ -327,49 +321,49 @@
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="./assets/plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="./assets/plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/genu.jpg'?>" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="./assets/plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/ritesh.jpg'?>" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="./assets/plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/arijit.jpg'?>" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="./assets/plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/govinda.jpg'?>" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="./assets/plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/hritik.jpg'?>" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="./assets/plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -393,27 +387,27 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="./assets/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/jquery/dist/jquery.min.js'?>"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="./assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url().'/assets/bootstrap/dist/js/bootstrap.min.js'?>"></script>
     <!-- Menu Plugin JavaScript -->
-    <script src="./assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js'?>"></script>
     <!--slimscroll JavaScript -->
-    <script src="./assets/js/jquery.slimscroll.js"></script>
+    <script src="<?php echo base_url().'/assets/js/jquery.slimscroll.js'?>"></script>
     <!--Wave Effects -->
-    <script src="./assets/js/waves.js"></script>
+    <script src="<?php echo base_url().'/assets/js/waves.js'?>"></script>
     <!--Counter js -->
-    <script src="./assets/plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
-    <script src="./assets/plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/waypoints/lib/jquery.waypoints.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/counterup/jquery.counterup.min.js'?>"></script>
     <!-- chartist chart -->
-    <script src="./assets/plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
-    <script src="./assets/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/chartist-js/dist/chartist.min.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js'?>"></script>
     <!-- Sparkline chart JavaScript -->
-    <script src="./assets/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js'?>"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="./assets/js/custom.min.js"></script>
-    <script src="./assets/js/dashboard1.js"></script>
-    <script src="./assets/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+    <script src="<?php echo base_url().'/assets/js/custom.min.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/js/dashboard1.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/toast-master/js/jquery.toast.js'?>"></script>
 </body>
 
 </html>
