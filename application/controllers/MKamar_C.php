@@ -27,12 +27,9 @@ class MKamar_C extends CI_Controller {
 
 	public function inputKamar(){
 		$data = $this->input->post();
-			
-		// $config['upload_path'] = './assets/img/';
-		// $config['allowed_types'] = 'jpg|jpeg|png';
-		// $config['max_size'] = '1048';
-		
-		//$this->load->library('upload', $config);
+		$config['upload_path'] = base_url().'/assets/plugins/images/';
+		$this->load->library('upload', $config);
+
 		$this->rules();
 
 		if($this->form_validation->run() == FALSE)
@@ -44,23 +41,9 @@ class MKamar_C extends CI_Controller {
 		{
 			$this->load->model('Kamar_M');
 			$this->Kamar_M->inputKamar($data);
+			$this->upload->do_upload('image');
 			redirect('MKamar_C');
 		}
-		
-		// else
-		// {
-		// 	if(!$this->upload->do_upload('cover'))
-		// 	{
-		// 		$error = array('error' => $this->upload->display_errors());
-
-		// 		$this->load->view('createevent', $error);
-		// 	}else
-		// 	{
-		// 		$this->load->model('CreateEvent_M');
-		// 		$this->CreateEvent_M->createEvent($data);
-		// 		redirect('MKamar_C/index');
-		// 	}
-		// }
 	}
 
 	public function rules()

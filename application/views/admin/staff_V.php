@@ -83,25 +83,22 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="<?php echo site_url('Dashboard_C')?>" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        <a href="<?php echo site_url('MDashboard_C')?>" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url('MKamar_C')?>" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Kamar</a>
+                        <a href="<?php echo site_url('MKamar_C')?>" class="waves-effect"><i class="fa fa-building fa-fw" aria-hidden="true"></i>Kamar</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url('MStaff_C')?>" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Staff</a>
+                        <a href="<?php echo site_url('MStaff_C')?>" class="waves-effect"><i class="fa fa-group fa-fw" aria-hidden="true"></i>Staff</a>
                     </li>
                     <li>
-                        <a href="fontaw" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Icons</a>
+                        <a href="<?php echo site_url('MTamu_C')?>" class="waves-effect"><i class="fa fa-male fa-fw" aria-hidden="true"></i>Tamu</a>
                     </li>
                     <li>
-                        <a href="map-g" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
+                        <a href="<?php echo site_url('MTransaksi_C')?>" class="waves-effect"><i class="fa fa-bar-chart-o fa-fw" aria-hidden="true"></i>Transaksi</a>
                     </li>
                     <li>
-                        <a href="aaa" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="aaa" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Error 404</a>
+                        <a href="aaa" class="waves-effect"><i class="fa fa-spin fa-cog fa-fw" aria-hidden="true"></i>Pengaturan</a>
                     </li>
                 </ul>
             </div>
@@ -187,7 +184,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Foto</label>
                                     <div class="col-md-12">
-                                        <textarea rows="5" class="form-control form-control-line"></textarea>
+                                        <input type="file" class="form-control" id="inputCover" name="image">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -225,7 +222,7 @@
                                                 <td><?php echo $item->jeniskelamin?></td>
                                                 <td><?php echo $item->umur?></td>
                                                 <td><a class="btn btn-danger" title="Hapus Data" href="<?php echo site_url('MStaff_C/delete/'.$item->id)?>"><i class="fa fa-trash-o"></i></a></td>
-                                                <td><button class="btn btn-primary" title="Ubah Data" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil-square-o"></i></button></td>
+                                                <td><button class="btn btn-primary" title="Ubah Data" data-toggle="modal" data-target="#myModal<?php echo $i?>"><i class="fa fa-pencil-square-o"></i></button></td>
                                             </tr>
                                         <?php } ?>
                                     </tbody>
@@ -235,78 +232,80 @@
                     </div>
                 
                     <!-- modal -->
-                    <div class="modal" id="myModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <h4 class="modal-title">Ubah Data Pegawai</h4>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <?php $i=0; foreach($data as $item){ $i++;?>
+                        <div class="modal" id="myModal<?php echo $i?>">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h4 class="modal-title">Ubah Data Pegawai</h4>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
                                         </div>
                                     </div>
+                                    
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <!-- <form method="POST" action="" enctype="multipart/form-data">  -->
+                                        <?php echo form_open_multipart('MStaff_C/update/'.$item->id, 'class="form-horizontal form-material" runat="server"'); ?>
+                                            <div class="col-md-6" style="margin-top:5%">
+                                                <div>
+                                                    <h4>Nama Pegawai</h4>
+                                                    <input  class="form-control select2" type="text" name="nama" value="<?php echo $item->nama?>" style=" width: 100%;">
+                                                </div>
+                                                <div>
+                                                    <h4>Username Pegawai</h4>
+                                                    <input  class="form-control select2" type="text" name="username" value="<?php echo $item->username?>" style=" width: 100%;">
+                                                </div>
+                                                <div>
+                                                    <h4>Password</h4>
+                                                    <input  class="form-control select2" type="text" name="pass" value="<?php echo $item->password?>" style=" width: 100%;">
+                                                </div>
+                                                <div>
+                                                    <h4>Jabatan</h4>
+                                                    <select class="form-control form-control-line" name="jabatan">
+                                                        <option value="">Pilih Jabatan</option>
+                                                        <option value="Human Resource">Human Resource</option>
+                                                        <option value="Receptionist">Receptionist</option>
+                                                        <option value="Manager">Manager</option>
+                                                        <option value="Office Worker">Office Worker</option>
+                                                    </select>                                            
+                                                </div>
+                                                <div>
+                                                    <h4>Jenis Kelamin</h4>
+                                                    <select class="form-control form-control-line" name="jk">
+                                                        <option value="">Pilih Jenis Kelamin</option>
+                                                        <option value="Laki-Laki">Laki-Laki</option>
+                                                        <option value="Perempuan">Perempuan</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6" style="margin-top:5%">
+                                                <div>
+                                                    <h4>Umur</h4>
+                                                    <input type="number" name="umur" value="<?php echo $item->umur?>" class="form-control select2"> 
+                                                </div>
+                                                <div>
+                                                    <label><h4>Foto</h4></label>
+                                                    <input type="file" class="form-control" id="inputCover" name="image">
+                                                </div>
+                                                <div>
+                                                    <input class="btn btn-success" type="submit" value="SUBMIT" style="margin-top:5%; width:100%">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer"></div>
                                 </div>
-                                
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <!-- <form method="POST" action="" enctype="multipart/form-data">  -->
-                                    <?php echo form_open_multipart('MStaff_C/update/'.$item->id, 'class="form-horizontal form-material" runat="server"'); ?>
-                                        <div class="col-md-6" style="margin-top:5%">
-                                            <div>
-                                                <h4>Nama Pegawai</h4>
-                                                <input  class="form-control select2" type="text" name="nama" value="<?php echo $item->nama?>" style=" width: 100%;">
-                                            </div>
-                                            <div>
-                                                <h4>Username Pegawai</h4>
-                                                <input  class="form-control select2" type="text" name="username" value="<?php echo $item->username?>" style=" width: 100%;">
-                                            </div>
-                                            <div>
-                                                <h4>Password</h4>
-                                                <input  class="form-control select2" type="text" name="pass" value="<?php echo $item->password?>" style=" width: 100%;">
-                                            </div>
-                                            <div>
-                                                <h4>Jabatan</h4>
-                                                <select class="form-control form-control-line" name="jabatan">
-                                                    <option value="">Pilih Jabatan</option>
-                                                    <option value="Human Resource">Human Resource</option>
-                                                    <option value="Receptionist">Receptionist</option>
-                                                    <option value="Manager">Manager</option>
-                                                    <option value="Office Worker">Office Worker</option>
-                                                </select>                                            
-                                            </div>
-                                            <div>
-                                                <h4>Jenis Kelamin</h4>
-                                                <select class="form-control form-control-line" name="jk">
-                                                    <option value="">Pilih Jenis Kelamin</option>
-                                                    <option value="Laki-Laki">Laki-Laki</option>
-                                                    <option value="Perempuan">Perempuan</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6" style="margin-top:5%">
-                                            <div>
-                                                <h4>Umur</h4>
-                                                <input type="number" name="umur" value="<?php echo $item->umur?>" class="form-control select2"> 
-                                            </div>
-                                            <div>
-                                                <label><h4>Foto</h4></label>
-                                                <textarea class="form-control select2" rows="5" name="deskripsi_obat" id="comment" value=""></textarea>
-                                            </div>
-                                            <div>
-                                                <input class="btn btn-success" type="submit" value="SUBMIT" style="margin-top:5%; width:100%">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                
-                                <!-- Modal footer -->
-                                <div class="modal-footer"></div>
                             </div>
                         </div>
-                    </div>
+                    <?php } ?>
                     <!-- end modal -->                       
                 </div>
                 <!-- /.row -->

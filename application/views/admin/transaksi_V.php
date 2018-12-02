@@ -13,6 +13,13 @@
     <link href="<?php echo base_url().'/assets/bootstrap/dist/css/bootstrap.min.css'?>" rel="stylesheet">
     <!-- Menu CSS -->
     <link href="<?php echo base_url().'/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css'?>" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/toast-master/css/jquery.toast.css'?>" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/morrisjs/morris.css'?>" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/chartist-js/dist/chartist.min.css'?>" rel="stylesheet">
+    <link href="<?php echo base_url().'/assets/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css'?>" rel="stylesheet">
     <!-- animation CSS -->
     <link href="<?php echo base_url().'/assets/css/animate.css'?>" rel="stylesheet">
     <!-- Custom CSS -->
@@ -113,40 +120,84 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">MANAGE TAMU</h4> </div>
+                        <h4 class="page-title">TRANSAKSI</h4> </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li class="active">Manage Tamu</li>
+                            <li class="active">Transaksi</li>
                         </ol>
                     </div>
                 </div>
+
+                 <div class="row">
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Total Jumlah Transaksi</h3>
+                            <ul class="list-inline two-part">
+                                <li>
+                                    <div id="sparklinedash"></div>
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">659</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Transaksi per Bulan Terbaik</h3>
+                            <ul class="list-inline two-part">
+                                <li>
+                                    <div id="sparklinedash2"></div>
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">256</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Jumlah Transaksi Bulan Ini</h3>
+                            <ul class="list-inline two-part">
+                                <li>
+                                    <div id="sparklinedash3"></div>
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">456</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- .row -->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="white-box">
-                            <h3 class="box-title">Daftar Tamu</h3>
+                            <h3 class="box-title">DAFTAR TRANSAKSI</h3>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th>Nama</th>
-                                            <th>Username</th>
-                                            <th>Jenis Kelamin</th>
-                                            <th>Umur</th>
-                                            <th>Action</th>
+                                            <th>Kode</th>
+                                            <th>Pemesan</th>
+                                            <th>Kamar</th>
+                                            <th>Waktu Menginap(Jam)</th>
+                                            <th>Total Bayar</th>
+                                            <th>Jenis</th>
+                                            <th>Status</th>
+                                            <th>Tanggal</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $i=0; foreach($data as $item){ $i++;?>
                                             <tr>
                                                 <td><?php echo $i?></td>
-                                                <td><?php echo $item->nama?></td>
-                                                <td><?php echo $item->username?></td>
-                                                <td><?php echo $item->jeniskelamin?></td>
-                                                <td><?php echo $item->umur?></td>
-                                                <td><a class="btn btn-danger" title="Hapus Data" href="<?php echo site_url('MStaff_C/delete/'.$item->id)?>"><i class="fa fa-trash-o"></i></a></td>
+                                                <td class="text-info"><?php echo $item->id?></td>
+                                                <td class="text-info"><?php echo $item->user?></td>
+                                                <td class="text-info"><?php echo $item->kamar?></td>
+                                                <td><?php echo $item->durasi?></td>
+                                                <td><?php echo $item->totalbayar?></td>
+                                                <td><?php echo $item->jenis?></td>
+                                                <td class="text-success"><?php echo $item->status?></td>
+                                                <td><?php echo $item->tanggal?></td>
                                             </tr>
                                         <?php } ?>
                                     </tbody>
@@ -154,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                
+
                     <!-- modal -->
                     <div class="modal" id="myModal">
                         <div class="modal-dialog">
@@ -256,8 +307,18 @@
     <script src="<?php echo base_url().'/assets/js/jquery.slimscroll.js'?>"></script>
     <!--Wave Effects -->
     <script src="<?php echo base_url().'/assets/js/waves.js'?>"></script>
+    <!--Counter js -->
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/waypoints/lib/jquery.waypoints.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/counterup/jquery.counterup.min.js'?>"></script>
+    <!-- chartist chart -->
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/chartist-js/dist/chartist.min.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js'?>"></script>
+    <!-- Sparkline chart JavaScript -->
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js'?>"></script>
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url().'/assets/js/custom.min.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/js/dashboard1.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/plugins/bower_components/toast-master/js/jquery.toast.js'?>"></script>
 </body>
 
 </html>

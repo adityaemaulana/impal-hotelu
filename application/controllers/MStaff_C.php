@@ -27,7 +27,9 @@ class MStaff_C extends CI_Controller {
 
 	public function input(){
 		$data = $this->input->post();
-		
+		$config['upload_path'] = base_url().'/assets/plugins/images/';
+		$this->load->library('upload', $config);
+
 		$this->rules();
 
 		if($this->form_validation->run() == FALSE)
@@ -39,6 +41,7 @@ class MStaff_C extends CI_Controller {
 		{
 			$this->load->model('Staff_M');
 			$this->Staff_M->input($data);
+			$this->upload->do_upload('image');
 			redirect('MStaff_C');
 		}
 	}

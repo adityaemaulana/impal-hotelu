@@ -4,14 +4,15 @@
 
 		public function inputKamar($data)
 		{
-			//$img = 'assets/img/'.$_FILES['cover']['name'];
+			$img = base_url().'/assets/plugins/images/'.$_FILES['image']['name'];
+
 			$data = array(
 					//'imageurl' => $img,
 					'nama' => $_POST['nama'],
 					'tipe' => $_POST['tipe'],
 					'status' => $_POST['status'],
 					'harga' => $_POST['harga'],
-					'imageUrl' => ''
+					'imageUrl' => $img
 			);
 
 			$this->db->insert(self::TABLE, $data);

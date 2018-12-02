@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class AdminDashboard_C extends CI_Controller {
+class MDashboard_C extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.

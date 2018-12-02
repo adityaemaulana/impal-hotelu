@@ -4,7 +4,8 @@
 
 		public function input($data)
 		{
-            //$img = 'assets/img/'.$_FILES['cover']['name'];
+			$img = base_url().'/assets/plugins/images/'.$_FILES['image']['name'];
+			
 			$data = array(
                     'nama' => $_POST['nama'],
                     'jabatan' => $_POST['jabatan'],
@@ -12,7 +13,7 @@
                     'password' => $_POST['pass'],
                     'jeniskelamin' => $_POST['jk'],
                     'umur' => $_POST['umur'], 
-					'imageUrl' => ''
+					'imageUrl' => '$img'
             );
             echo $data['nama'];
 

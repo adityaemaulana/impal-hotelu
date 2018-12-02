@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png'?>" sizes="16x16" href="<?php echo base_url().'/assets/plugins/images/favicon.png'?>">
+    <link rel="icon" type="image/png'?>" sizes="16x16" href="<?php echo base_url().'/assets/plugins/images/admin-logo-hotelu.png'?>">
     <title>Hotelu - Hotel Management System</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url().'/assets/bootstrap/dist/css/bootstrap.min.css'?>" rel="stylesheet">
@@ -90,25 +90,22 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="<?php echo site_url('Dashboard_C')?>" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        <a href="<?php echo site_url('MDashboard_C')?>" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url('MKamar_C')?>" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Kamar</a>
+                        <a href="<?php echo site_url('MKamar_C')?>" class="waves-effect"><i class="fa fa-building fa-fw" aria-hidden="true"></i>Kamar</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url('MStaff_C')?>" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Staff</a>
+                        <a href="<?php echo site_url('MStaff_C')?>" class="waves-effect"><i class="fa fa-group fa-fw" aria-hidden="true"></i>Staff</a>
                     </li>
                     <li>
-                        <a href="fontaw" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Icons</a>
+                        <a href="<?php echo site_url('MTamu_C')?>" class="waves-effect"><i class="fa fa-male fa-fw" aria-hidden="true"></i>Tamu</a>
                     </li>
                     <li>
-                        <a href="map-g" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
+                        <a href="<?php echo site_url('MTransaksi_C')?>" class="waves-effect"><i class="fa fa-bar-chart-o fa-fw" aria-hidden="true"></i>Transaksi</a>
                     </li>
                     <li>
-                        <a href="aaa" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="aaa" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Error 404</a>
+                        <a href="aaa" class="waves-effect"><i class="fa fa-spin fa-cog fa-fw" aria-hidden="true"></i>Pengaturan</a>
                     </li>
                 </ul>
             </div>
@@ -139,18 +136,18 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Visit</h3>
+                            <h3 class="box-title">Jumlah Pengunjung</h3>
                             <ul class="list-inline two-part">
                                 <li>
                                     <div id="sparklinedash"></div>
                                 </li>
-                                <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">659</span></li>
+                                <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">1350</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Page Views</h3>
+                            <h3 class="box-title">Total Akses Page</h3>
                             <ul class="list-inline two-part">
                                 <li>
                                     <div id="sparklinedash2"></div>
@@ -161,12 +158,12 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <div class="white-box analytics-info">
-                            <h3 class="box-title">Unique Visitor</h3>
+                            <h3 class="box-title">Pengunjung Terdaftar</h3>
                             <ul class="list-inline two-part">
                                 <li>
                                     <div id="sparklinedash3"></div>
                                 </li>
-                                <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">911</span></li>
+                                <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">456</span></li>
                             </ul>
                         </div>
                     </div>
@@ -177,12 +174,12 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            <h3 class="box-title">Products Yearly Sales</h3>
+                            <h3 class="box-title">Grafik Transaksi</h3>
                             <ul class="list-inline text-right">
                                 <li>
-                                    <h5><i class="fa fa-circle m-r-5 text-info"></i>Mac</h5> </li>
+                                    <h5><i class="fa fa-circle m-r-5 text-info"></i>Online</h5> </li>
                                 <li>
-                                    <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Windows</h5> </li>
+                                    <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Offline</h5> </li>
                             </ul>
                             <div id="ct-visits" style="height: 405px;"></div>
                         </div>
@@ -196,74 +193,82 @@
                         <div class="white-box">
                             <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
                                 <select class="form-control pull-right row b-none">
-                                    <option>March 2017</option>
-                                    <option>April 2017</option>
-                                    <option>May 2017</option>
-                                    <option>June 2017</option>
-                                    <option>July 2017</option>
+                                    <option>November 2018</option>
+                                    <option>Oktober 2018</option>
+                                    <option>September 2018</option>
+                                    <option>Agustus 2018</option>
+                                    <option>July 2018</option>
                                 </select>
                             </div>
-                            <h3 class="box-title">Recent sales</h3>
+                            <h3 class="box-title">Transaksi Terbaru</h3>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
                                             <th>NAME</th>
+                                            <th>TIPE</th>
                                             <th>STATUS</th>
-                                            <th>DATE</th>
-                                            <th>PRICE</th>
+                                            <th>TANGGAL</th>
+                                            <th>HARGA</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td class="txt-oflo">Elite admin</td>
-                                            <td>SALE</td>
-                                            <td class="txt-oflo">April 18, 2017</td>
-                                            <td><span class="text-success">$24</span></td>
+                                            <td class="txt-oflo">Amadia</td>
+                                            <td class="txt-oflo">Deluxe</td>
+                                            <td class="text-success">Lunas</td>
+                                            <td class="txt-oflo">2018-11-24</td>
+                                            <td><span class="text-success">Rp 150000</span></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td class="txt-oflo">Real Homes WP Theme</td>
-                                            <td>EXTENDED</td>
-                                            <td class="txt-oflo">April 19, 2017</td>
-                                            <td><span class="text-info">$1250</span></td>
+                                            <td class="txt-oflo">Melati</td>
+                                            <td class="txt-oflo">Family</td>
+                                            <td class="text-info">Dipesan</td>
+                                            <td class="txt-oflo">2018-11-27</td>
+                                            <td><span class="text-info">Rp 235000</span></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td class="txt-oflo">Ample Admin</td>
-                                            <td>EXTENDED</td>
-                                            <td class="txt-oflo">April 19, 2017</td>
-                                            <td><span class="text-info">$1250</span></td>
+                                            <td class="txt-oflo">Amaryllis</td>
+                                            <td class="txt-oflo">Suite</td>
+                                            <td class="text-success">Lunas</td>
+                                            <td class="txt-oflo">2018-11-24</td>
+                                            <td><span class="text-success">Rp 750000</span></td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
-                                            <td class="txt-oflo">Medical Pro WP Theme</td>
-                                            <td>TAX</td>
-                                            <td class="txt-oflo">April 20, 2017</td>
-                                            <td><span class="text-danger">-$24</span></td>
+                                            <td class="txt-oflo">Camellia</td>
+                                            <td class="txt-oflo">Standard</td>
+                                            <td class="text-danger">Batal</td>
+                                            <td class="txt-oflo">2018-11-22</td>
+                                            <td><span class="text-danger">Rp 300000</span></td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
-                                            <td class="txt-oflo">Hosting press html</td>
-                                            <td>SALE</td>
-                                            <td class="txt-oflo">April 21, 2017</td>
-                                            <td><span class="text-success">$24</span></td>
+                                            <td class="txt-oflo">Marigold</td>
+                                            <td class="txt-oflo">Family</td>
+                                            <td class="text-success">Lunas</td>
+                                            <td class="txt-oflo">2018-11-21</td>
+                                            <td><span class="text-success">Rp 165000</span></td>
                                         </tr>
                                         <tr>
                                             <td>6</td>
-                                            <td class="txt-oflo">Digital Agency PSD</td>
-                                            <td>SALE</td>
-                                            <td class="txt-oflo">April 23, 2017</td>
-                                            <td><span class="text-danger">-$14</span></td>
+                                            <td class="txt-oflo">Phlox</td>
+                                            <td class="txt-oflo">Deluxe</td>
+                                            <td class="text-info">Dipesan</td>
+                                            <td class="txt-oflo">2018-11-14</td>
+                                            <td><span class="text-info">Rp 330000</span></td>
                                         </tr>
                                         <tr>
                                             <td>7</td>
-                                            <td class="txt-oflo">Helping Hands WP Theme</td>
-                                            <td>MEMBER</td>
-                                            <td class="txt-oflo">April 22, 2017</td>
-                                            <td><span class="text-success">$64</span></td>
+                                            <td class="txt-oflo">Primrose</td>
+                                            <td class="txt-oflo">Suite</td>
+                                            <td class="text-danger">Batal</td>
+                                            <td class="txt-oflo">2018-11-09</td>
+                                            <td><span class="text-danger">Rp 150000</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -321,49 +326,49 @@
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" class="img-circle"> <span>Eri Simanjuntak<small class="text-success">online</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/genu.jpg'?>" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/genu.jpg'?>" alt="user-img" class="img-circle"> <span>Budi Dila Sibutar-butar<small class="text-warning">Away</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/ritesh.jpg'?>" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/ritesh.jpg'?>" alt="user-img" class="img-circle"> <span>Fredli Harahap<small class="text-danger">Busy</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/arijit.jpg'?>" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/arijit.jpg'?>" alt="user-img" class="img-circle"> <span>Kevin Dio Zebua<small class="text-muted">Offline</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/govinda.jpg'?>" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/govinda.jpg'?>" alt="user-img" class="img-circle"> <span>Rinanta Febby<small class="text-success">online</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/hritik.jpg'?>" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/hritik.jpg'?>" alt="user-img" class="img-circle"> <span>Jean Dalimunthe<small class="text-success">online</small></span></a>
                                             </li>
                                             <li>
                                                 <div class="call-chat">
                                                     <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-phone"></i></button>
                                                     <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-comments-o"></i></button>
                                                 </div>
-                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                                <a href="javascript:void(0)"><img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" class="img-circle"> <span>Diandra Mendrofa<small class="text-success">online</small></span></a>
                                             </li>
                                         </ul>
                                     </div>
