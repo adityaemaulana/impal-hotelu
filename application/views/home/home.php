@@ -8,61 +8,30 @@ $this->load->view('home/header');
 		
 		<Image Carousel>
 		
-	    		<img class="banner-images" src="<?php echo base_url(); ?>assets/images/Capture.png	">
-    			<img class="banner-images" src="<?php echo base_url(); ?>assets/images/banner-image-1.jpg">
-    			
-    			
-  		</div>	
-  			<!--a class="carousel-control-prev" href="#banner-images" data-slide="prev">
-	    		<span class="carousel-image-prev"></span>
-  			</a>
-  			<a class="carousel-control-next" href="#banner-images" data-slide="next">
-    			<span class="carousel-image-next"></span>
-  			</a>
-		</div-->	
+				<img class="banner-images" src="<?php echo base_url(); ?>assets/images/Capture.png	">
+				<img class="banner-images" src="<?php echo base_url(); ?>assets/images/banner-image-1.jpg">
 
+		</div>	
+				
+		<image Carousel>
+				<img class="banner-images" src="<?php echo base_url(); ?>assets/images/Capture.png	">	
+				<img class="Ok" src="<?php echo base_url(); ?>assets/images/Home.png	">
 		
-		<!--Contents-->
+		</div>
+
+		<image Carousel>
+				<img class="banner-images" src="<?php echo base_url(); ?>assets/images/Capture.png	">	
+				<img class="Ok" src="<?php echo base_url(); ?>assets/images/info.png	">
+		
+		</div>
+  			
+		
+		
 		<div class="container site-content">
 			<div class="row">
-				<div class="col-lg-8">
-					
-					
-					
-							</div>
-						</div>
-						<div class="tab-pane container" id="content2">
-  							<div class="container-fluid">
-								<div class="row">
-								<?php foreach ($kamar -> result() as  $value) { ?>
-									<div class="col-md-4 content-item">
-										<div class="card">
-										
-  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/kamar.jpg">
-											<div class="card-body">
-												<a href="#">
-													<h4 class="card-title"><?php echo $value->nama ?></h4>
-												</a>
-												<h6 class="card-text"><?php echo $value->tipe ?></h6>
-								    			<span class="card-text old-price"><?php echo $value->harga ?></span><br> 
-								    			
-								    			<a href="#" class="btn btn-block">Booking Now</a>
-											</div>
-											
-										</div>
-									</div>
-									<?php }?>
-								
-								<div class="row">
-									<div class="col-md-4 content-item">
-										
-									</div>
-									<div class="col-md-4 content-item">
-									</div>
-									<div class="col-md-4 content-item">
-									</div>
-								</div>
-							</div>
+				
+
+
   						</div>
   						<div class="tab-pane container" id="content3">
   							
