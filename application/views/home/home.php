@@ -34,9 +34,10 @@ $this->load->view('home/header');
 						<div class="tab-pane container" id="content2">
   							<div class="container-fluid">
 								<div class="row">
+								<?php foreach ($kamar -> result() as  $value) { ?>
 									<div class="col-md-4 content-item">
 										<div class="card">
-										<?php foreach ($kamar -> result() as  $value) { ?>
+										
   											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/kamar.jpg">
 											<div class="card-body">
 												<a href="#">
@@ -47,9 +48,10 @@ $this->load->view('home/header');
 								    			
 								    			<a href="#" class="btn btn-block">Booking Now</a>
 											</div>
-											<?php }?>
+											
 										</div>
 									</div>
+									<?php }?>
 								
 								<div class="row">
 									<div class="col-md-4 content-item">
