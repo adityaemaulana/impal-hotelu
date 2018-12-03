@@ -2,7 +2,7 @@
 <body>
 	
 	<div class="container ">
-		<img class="coverBg" src="<?php echo base_url();?>image/backhotel.png">	
+		<img class="coverBg" src="<?php echo base_url();?>assets/image/backhotel.png">	
 	</div>
 	
 	<div class="container">
@@ -45,7 +45,7 @@
 			
 			<div class="col-md-5 my-auto mx-auto">
 				<h3 class="text-center">Register To HotelU</h3>
-				<center><img src="<?php echo base_url();?>image/cash-register.png"></center>
+				<center><img src="<?php echo base_url();?>assets/image/cash-register.png"></center>
        			<center><button type="submit" class="btn btn-lg btn-info">Register</button></center>
 				<center>
 					<p>Sudah Punya Akun? 

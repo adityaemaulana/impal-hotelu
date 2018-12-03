@@ -2,7 +2,7 @@
 <body>
 	
 	<div class="container gambar">
-		<img class="coverBg" src="<?php echo base_url();?>image/backhotel.png">	
+		<img class="coverBg" src="<?php echo base_url();?>assets/image/backhotel.png">	
 	</div>
 	
 	<div class="container">

@@ -2,7 +2,7 @@
 <body>
 	
 	<div class="container ">
-		<img class="coverBg" src="<?php echo base_url();?>image/backhotel.png">	
+		<img class="coverBg" src="<?php echo base_url();?>assets/image/backhotel.png">	
 	</div>
 	
 	<div class="container">
@@ -97,7 +97,7 @@
 				<center><h3><?php echo $custom->nama;?></h3></center>
 				<center>
 					<p style="font-weight: bold; font-size: 16px;">Your Picture</p>
-					<img class="avatar mx-auto" alt="kosong" src="<?php echo base_url()?>image/<?php echo $custom->foto;?>"><br>		
+					<img class="avatar mx-auto" alt="kosong" src="<?php echo base_url()?>assets/image/<?php echo $custom->foto;?>"><br>		
 					<a class="btn btn-md btn-info" href="<?php echo site_url('C_Profile/ubahfoto')?>">Change Picture</a>
 				</center>
 			</div>

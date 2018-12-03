@@ -2,7 +2,7 @@
 <body>
 	
 	<div class="container ">
-		<img class="coverBg" src="<?php echo base_url();?>image/backhotel.png">	
+		<img class="coverBg" src="<?php echo base_url();?>assets/image/backhotel.png">	
 	</div>
 	
 	<?=form_open_multipart('C_Profile/ubah')?>
@@ -10,7 +10,7 @@
 	<?php foreach ($mmbr as $custom) {?>
 	<center><p style="font-weight: bold; font-size: 16px; padding-top: 2%;">Your Picture</p><center>
 		<div class="mx-auto">
-			<img class="avatar" alt="kosong" src="<?php echo base_url()?>image/<?php echo $custom->foto;?>">
+			<img class="avatar" alt="kosong" src="<?php echo base_url()?>assets/image/<?php echo $custom->foto;?>">
 		</div>
 		
 		<div class="col-md-6 mx-auto">
