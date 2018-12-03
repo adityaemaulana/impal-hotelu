@@ -51,9 +51,9 @@ class MKamar_C extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
 		$this->form_validation->set_message('required', '{field} tidak boleh kosong');
-		$this->form_validation->set_message('min_length', '{field} tidak boleh kurang dari 6 karakter');
+		$this->form_validation->set_message('min_length', '{field} tidak boleh kurang dari 1 karakter');
 
-		$this->form_validation->set_rules('nama', 'Nama Kamar', 'required|min_length[6]');
+		$this->form_validation->set_rules('nama', 'Nama Kamar', 'required|min_length[1]');
 		$this->form_validation->set_rules('tipe', 'Tipe', 'required');
 		$this->form_validation->set_rules('status', 'Status Pemesanan', 'required');
 		$this->form_validation->set_rules('harga', 'Harga', 'required');

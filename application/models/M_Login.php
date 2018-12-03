@@ -5,7 +5,7 @@
 			$this->db->where('email', $data['email']);
 			$this->db->where('password', $data['password']);
 			
-			$query = $this->db->get('customer');
+			$query = $this->db->get('tamu');
 			
 			if($query->num_rows()==1) {
 				return $query->row(0);

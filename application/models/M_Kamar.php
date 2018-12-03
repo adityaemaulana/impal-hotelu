@@ -9,7 +9,7 @@
 		
 		public function getInfoKamar($id)
 		{
-			$this->db->where('id_kamar',$id);
+			$this->db->where('id',$id);
 			$query = $this->db->get('kamar');
 			return $query->result_array();
 
@@ -30,9 +30,6 @@
 			return $query->result_array();
 
 		}
-		
-		
-		
 	}
 
 ?>

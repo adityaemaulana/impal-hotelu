@@ -25,7 +25,7 @@
 				"email"=>$email,
 				"password"=>$pass,
 				"nama"=>$nama,
-				"jk"=>$jk,
+				"jeniskelamin"=>$jk,
 				"umur"=>$umur
 			);
 			

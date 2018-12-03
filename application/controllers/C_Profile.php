@@ -50,27 +50,32 @@
 		}
 		
 		public function ubah(){
-    $config = [
-        'upload_path' => './image',
-        'allowed_types' => 'gif|jpg|png',
-        'max_size' => 5000
-      ];
-      $this->load->library('upload', $config);
-      if (!$this->upload->do_upload('foto')) //jika gagal upload
-      {
-          $error = array('error' => $this->upload->display_errors()); //tampilkan error
-          $this->load->view('ubahfoto', $error);
-      } else
-      //jika berhasil upload
-      {
-          $file = $this->upload->data();
-          //mengambil data di form
-          $data = $file['file_name'];
-          $this->M_Profile->upload($data); //memasukan data ke database
-          redirect('C_Profile/index'); //mengalihkan halaman
-
-      }
-  }
+			$config = [
+				'upload_path' => './image',
+				'allowed_types' => 'gif|jpg|png',
+				'max_size' => 5000
+			];
+			$this->load->library('upload', $config);
+			if (!$this->upload->do_upload('foto')) //jika gagal upload
+			{
+				$data = array(
+					'title' => 'Data member',
+					'mmbr' => $this->M_Profile->get_data(),
+					'error' => $this->upload->display_errors()
+				);
+				$this->load->view('navlogout');
+				$this->load->view('ubahfoto', $data);
+				$this->load->view('footer');
+			} else
+			//jika berhasil upload
+			{
+				$file = $this->upload->data();
+				//mengambil data di form
+				$data = $file['file_name'];
+				$this->M_Profile->upload($data); //memasukan data ke database
+				redirect('C_Profile/index'); //mengalihkan halaman
+			}
+		}
 	}
 
 ?>

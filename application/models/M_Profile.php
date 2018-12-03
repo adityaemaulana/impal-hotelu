@@ -3,7 +3,7 @@
 		public function getCustomer(){
 			$data = $this->session->userdata('username');
 			$this->db->where('username',$data);
-			$query = $this->db->get('customer');
+			$query = $this->db->get('tamu');
 			return $query->result();
 		}
 		
@@ -11,18 +11,18 @@
 		{
 			$data = $this->session->userdata('email');
 			$this->db->where('email',$data);
-			$query = $this->db->get('customer');
+			$query = $this->db->get('tamu');
 			return $query->result();
 		}
 		
 		function updateCustomer($data){  
-  		$tabel = 'customer'; 
+  		$tabel = 'tamu'; 
 		  $lolo = array (
 				"email"=>$data['email'],
 				"username"=>$data['username'],
 				"nama"=>$data['nama'],
 				"umur"=>$data['umur'],
-				"jk"=>$data['jk'],
+				"jeniskelamin"=>$data['jk'],
 				"password"=>$data['password'],
 			);  
 			$this->db->where('email', $data['email']);
@@ -37,13 +37,13 @@
 		public function deleteCustomer($id)
 		{
 			$this->db->where('email',$id);
-			$this->db->delete('customer');
+			$this->db->delete('tamu');
 		}
 		
 		public function upload($data){
-		  $this->db->set('foto',$data);
+		  $this->db->set('imageUrl',$data);
 		  $this->db->where('email',$this->session->userdata('email'));
-		  $this->db->update('customer');
+		  $this->db->update('tamu');
 		  return true;
 	  }
 	}

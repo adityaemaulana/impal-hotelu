@@ -9,10 +9,6 @@
     padding-bottom:5px;
 }
 
-li a.nav-details-link{
-    pointer-events: none;
-}
-
 li a.nav-details-link:focus
 {
 	color:#FFFFFF;

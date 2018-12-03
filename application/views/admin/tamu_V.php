@@ -152,7 +152,7 @@
                                                 <td><?php echo $item->username?></td>
                                                 <td><?php echo $item->jeniskelamin?></td>
                                                 <td><?php echo $item->umur?></td>
-                                                <td><a class="btn btn-danger" title="Hapus Data" href="<?php echo site_url('MStaff_C/delete/'.$item->id)?>"><i class="fa fa-trash-o"></i></a></td>
+                                                <td><a class="btn btn-danger" title="Hapus Data" href="<?php echo site_url('MStaff_C/delete/'.$item->username)?>"><i class="fa fa-trash-o"></i></a></td>
                                             </tr>
                                         <?php } ?>
                                     </tbody>

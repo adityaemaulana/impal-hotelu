@@ -39,6 +39,4 @@
 				$this->load->view('footer');
 			}
 		}
-		
-		
-	}
+}

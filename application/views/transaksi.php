@@ -7,23 +7,21 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <?php $this->load->view('navlogout')?>
-        
         <div class="container-fluid p-0">
-            <img src="<?php echo base_url().'/assets/plugins/images/background-header.jpg'?>" alt="" width=100% height=350px>
+            <img src="<?php echo base_url();?>assets/image/backhotel.png" width=100% height=500px>
         </div>
 
         <ul class="nav nav-details mb-5">
             <div class="container">
                 <div class="row">
-                    <li class="nav-item col-md-4 my-2" id="navR">
-                        <a href="#" class="text-center nav-link nav-details-link">1. Rincian Anda</a>
+                    <li class="nav-item col-md-4 my-2 active" id="navR">
+                        <a href="#rincian" class="text-center nav-link nav-details-link active">1. Rincian Anda</a>
                     </li>
                     <li class="nav-item col-md-4 my-2" id="navP">
-                        <a href="#" class="text-center nav-link nav-details-link">2. Pembayaran</a>
+                        <a href="#pembayaran" class="text-center nav-link nav-details-link">2. Pembayaran</a>
                     </li>
                     <li class="nav-item col-md-4 my-2" id="navS">
-                        <a href="#" class="text-center nav-link nav-details-link">3. Selesai</a>
+                        <a href="#selesai" class="text-center nav-link nav-details-link">3. Selesai</a>
                     </li>
                 </div>
             </div>
