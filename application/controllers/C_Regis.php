@@ -7,7 +7,9 @@
 		}
 		
 		public function index(){
+			$this->load->view('navsementara');
 			$this->load->view('Register');
+			$this->load->view('footer');
 		}
 		
 		public function register(){

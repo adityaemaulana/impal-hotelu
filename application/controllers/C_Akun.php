@@ -11,7 +11,9 @@
 					'title' => 'Login To hotelu',
 					'filename' => 'Login'
 				);
+				$this->load->view('navsementara');
 				$this->load->view('Login',$data);
+				$this->load->view('footer');
 			}
 			
 			public function check(){
@@ -19,7 +21,7 @@
 				$login = $this->M_Login->check($data);
 				if ($login){
 					$this->session->set_userdata('email',$login->email);
-					redirect('C_Akun/index');
+					redirect('C_Profile/index');
 				} else{
 					$this->session->set_flashdata('message','Error Login');
 					redirect('C_Akun/index');

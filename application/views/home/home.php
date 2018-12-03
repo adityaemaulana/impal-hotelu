@@ -6,13 +6,13 @@ $this->load->view('home/header');
 		$this->load->view('home/navbar');
 		?>
 		
-		<!--Image Carousel-->
+		<Image Carousel>
 		
-	    		
-    			<img class="banner-images" src="<?php echo base_url(); ?>assets/images/banner-image-1.jpg" >
+	    		<img class="banner-images" src="<?php echo base_url(); ?>assets/images/Capture.png	">
+    			<img class="banner-images" src="<?php echo base_url(); ?>assets/images/banner-image-1.jpg">
     			
     			
-  			
+  		</div>	
   			<!--a class="carousel-control-prev" href="#banner-images" data-slide="prev">
 	    		<span class="carousel-image-prev"></span>
   			</a>
@@ -31,96 +31,26 @@ $this->load->view('home/header');
 					
 							</div>
 						</div>
-  						<div class="tab-pane container" id="content2">
+						<div class="tab-pane container" id="content2">
   							<div class="container-fluid">
 								<div class="row">
 									<div class="col-md-4 content-item">
 										<div class="card">
-  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/img-not-available.jpg">
+										<?php foreach ($kamar -> result() as  $value) { ?>
+  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/kamar.jpg">
 											<div class="card-body">
 												<a href="#">
-													<h4 class="card-title">Room Name</h4>
+													<h4 class="card-title"><?php echo $value->nama ?></h4>
 												</a>
-												<h6 class="card-text">Description</h6>
-								    			<span class="card-text old-price">Rp 199.999</span><br>
+												<h6 class="card-text"><?php echo $value->tipe ?></h6>
+								    			<span class="card-text old-price"><?php echo $value->harga ?></span><br> 
 								    			
-								    			<a href="#" class="btn btn-block">BOOKING NOW</a>
+								    			<a href="#" class="btn btn-block">Booking Now</a>
 											</div>
+											<?php }?>
 										</div>
 									</div>
-									<div class="col-md-4 content-item">
-										<div class="card">
-  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/img-not-available.jpg">
-											<div class="card-body">
-												<a href="#">
-													<h4 class="card-title">Room Name</h4>
-												</a>
-												<h6 class="card-text">Description</h6>
-								    			<span class="card-text old-price">Rp 199.999</span><br>
-								    			
-								    			<a href="#" class="btn btn-block">BOOKING NOW</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 content-item">
-										<div class="card">
-  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/img-not-available.jpg">
-											<div class="card-body">
-												<a href="#">
-													<h4 class="card-title">Room Name</h4>
-												</a>
-												<h6 class="card-text">Description</h6>
-								    			<span class="card-text old-price">Rp 199.999</span><br>
-								    			
-								    			<a href="#" class="btn btn-block">BOOKING NOW</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-4 content-item">
-										<div class="card">
-  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/img-not-available.jpg">
-											<div class="card-body">
-												<a href="#">
-													<h4 class="card-title">Room Name</h4>
-												</a>
-												<h6 class="card-text">Description</h6>
-								    			<span class="card-text old-price">Rp 199.999</span><br>
-								    		
-								    			<a href="#" class="btn btn-block">BOOKING NOW</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 content-item">
-										<div class="card">
-  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/img-not-available.jpg">
-											<div class="card-body">
-												<a href="#">
-													<h4 class="card-title">Room Name</h4>
-												</a>
-												<h6 class="card-text">Description</h6>
-								    			<span class="card-text old-price">Rp 199.999</span><br>
-								    			
-								    			<a href="#" class="btn btn-block">BOOKING NOW</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 content-item">
-										<div class="card">
-  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/img-not-available.jpg">
-											<div class="card-body">
-												<a href="#">
-													<h4 class="card-title">Room Name</h4>
-												</a>
-												<h6 class="card-text">Description</h6>
-								    			<span class="card-text old-price">Rp 199.999</span><br>
-								    	
-								    			<a href="#" class="btn btn-block">BOOKING NOW</a>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 								<div class="row">
 									<div class="col-md-4 content-item">
 										
