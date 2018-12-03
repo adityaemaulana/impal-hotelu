@@ -44,8 +44,8 @@
 				  <li class="nav-item">
 					<a class="nav-link" href="#">Pay</a>
 				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="#">Help</a>
+				  <li class="nav-item <?=($hal=='C_Kamar')?'active':'';?>">
+					<a class="nav-link" href="<?php echo site_url('C_Kamar/index') ?>">Kamar</a>
 				  </li>
 				  
 				</ul>
