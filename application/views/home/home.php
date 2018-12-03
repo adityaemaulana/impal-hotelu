@@ -1,9 +1,9 @@
 <?php
-$this->load->view('header');
+$this->load->view('home/header');
 ?>
 	<body>
 		<?php
-		$this->load->view('navbar');
+		$this->load->view('home/navbar');
 		?>
 		
 		<!--Image Carousel-->
@@ -155,5 +155,5 @@ $this->load->view('header');
 			</div>
 		</div>
 <?php
-$this->load->view('footer');
+$this->load->view('home/footer');
 ?>

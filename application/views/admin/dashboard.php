@@ -71,7 +71,13 @@
                             <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"> <img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">AdityaEM</b></a>
+                        <a class="profile-pic" role="button" data-toggle="dropdown"> 
+                            <img src="<?php echo base_url().'/assets/plugins/images/users/varun.jpg'?>" alt="user-img" width="36" class="img-circle">
+                            <b class="hidden-xs">AdityaEM</b>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -395,6 +401,7 @@
     <script src="<?php echo base_url().'/assets/plugins/bower_components/jquery/dist/jquery.min.js'?>"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url().'/assets/bootstrap/dist/js/bootstrap.min.js'?>"></script>
+    <script src="<?php echo base_url().'/assets/bootstrap/bootstrap.min.js'?>"></script>
     <!-- Menu Plugin JavaScript -->
     <script src="<?php echo base_url().'/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js'?>"></script>
     <!--slimscroll JavaScript -->

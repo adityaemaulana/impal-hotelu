@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Login</title>
+<link rel="icon" type="assets/plugins/images/png'?>" sizes="16x16" href="<?php echo base_url().'/assets/plugins/images/admin-logo-hotelu.png'?>">
+<title>Hotelu - Hotel Management System</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -15,7 +16,7 @@
 <body>
 	
 	<div class="container ">
-		<img class="coverBg" src="<?php echo base_url();?>image/backhotel.png">	
+		<img class="coverBg" src="<?php echo base_url();?>assets/plugins/images/backhotel.png">	
 	</div>
 	
 	<div class="container">
@@ -63,15 +64,15 @@
 					<center><h5>Follow Us</h5></center>
 					
 					<a href="http://facebook.com/">
-						<img src="<?php echo base_url();?>image/facebook.png" class="logoFol" alt="Fb">
+						<img src="<?php echo base_url();?>assets/plugins/images/facebook.png" class="logoFol" alt="Fb">
 					</a>
 					
 					<a href="http://facebook.com/">
-						<img src="<?php echo base_url();?>image/instagram.png" class="logoFol" alt="Ig">
+						<img src="<?php echo base_url();?>assets/plugins/images/instagram.png" class="logoFol" alt="Ig">
 					</a>
 					
 					<a href="http://facebook.com/">
-						<img src="<?php echo base_url();?>image/twitter.png" class="logoFol" alt="Tw">
+						<img src="<?php echo base_url();?>assets/plugins/images/twitter.png" class="logoFol" alt="Tw">
 					</a>
 					
             	</div>
@@ -79,10 +80,10 @@
 				<div class="col-sm-2 atas">
 					<center><h5>Payment</h5></center>
 					
-					<img src="<?php echo base_url();?>image/if_BCA_2425807.png" class="logoPay" alt="BCA">
-					<img src="<?php echo base_url();?>image/if_BNI_2425812.png" class="logoPay" alt="BNI">
-					<img src="<?php echo base_url();?>image/if_BRI_2425806.png" class="logoPay" alt="BRI">
-					<img src="<?php echo base_url();?>image/if_Mandiri_2425804.png" class="logoPay"alt="MANDIRI">
+					<img src="<?php echo base_url();?>assets/plugins/images/if_BCA_2425807.png" class="logoPay" alt="BCA">
+					<img src="<?php echo base_url();?>assets/plugins/images/if_BNI_2425812.png" class="logoPay" alt="BNI">
+					<img src="<?php echo base_url();?>assets/plugins/images/if_BRI_2425806.png" class="logoPay" alt="BRI">
+					<img src="<?php echo base_url();?>assets/plugins/images/if_Mandiri_2425804.png" class="logoPay"alt="MANDIRI">
 					
             	</div>
 			</div>
