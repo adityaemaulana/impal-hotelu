@@ -37,7 +37,7 @@ $this->load->view('home/header');
 									<div class="col-md-4 content-item">
 										<div class="card">
 										<?php foreach ($kamar -> result() as  $value) { ?>
-  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/img-not-available.jpg">
+  											<img class="card-img-top" src="<?php echo base_url(); ?>assets/images/kamar.jpg">
 											<div class="card-body">
 												<a href="#">
 													<h4 class="card-title"><?php echo $value->nama ?></h4>

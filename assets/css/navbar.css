@@ -1,11 +1,11 @@
 /*Navbar Style*/
 .navbar {
-	background-color: white;
+	background-color: #c3edd5;
 	border-radius: 0;
 	height: 60px;
 }
 .navbar-shadow {
-	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.22);
+	box-shadow: 2px 2px 10px #c3edd5(0, 0, 0, 0.22);
 }
 .navbar-brand {
 	height: 40px;
@@ -44,6 +44,8 @@
 #login-btn a {	
 	color: #6bb1ff !important;
 	margin-top: 0;
+	border-radius: 5px;
+	box-shadow: 1px 1px 0px
 }
 #sign-up-btn {
 	font-weight: normal;
