@@ -27,7 +27,7 @@ class MKamar_C extends CI_Controller {
 
 	public function inputKamar(){
 		$data = $this->input->post();
-		$config['upload_path'] = base_url().'/assets/plugins/images/';
+		$config['upload_path'] = base_url().'/assets/image/';
 		$this->load->library('upload', $config);
 
 		$this->rules();

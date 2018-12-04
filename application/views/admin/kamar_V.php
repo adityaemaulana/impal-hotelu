@@ -146,11 +146,12 @@
                                     <label class="col-sm-12">Tipe Kamar</label>
                                     <div class="col-sm-12">
                                         <select class="form-control form-control-line" name="tipe">
-                                            <option value="standard">Standard</option>
-                                            <option value="deluxe">Deluxe</option>
-                                            <option value="family">Family</option>
-                                            <option value="executive">Executive</option>
-                                            <option value="suite">Suite</option>
+                                            <option value="Standard">Standard</option>
+                                            <option value="Deluxe">Deluxe</option>
+                                            <option value="Superior Room">Superior Room</option>
+                                            <option value="Grand Deluxe">Grand Deluxe</option>
+                                            <option value="Club King">Club King</option>
+                                            <option value="The Suite">The Suite</option>
                                         </select>
                                         <?php echo form_error('tipe'); ?>
                                     </div>

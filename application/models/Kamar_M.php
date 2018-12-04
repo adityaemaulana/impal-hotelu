@@ -4,7 +4,7 @@
 
 		public function inputKamar($data)
 		{
-			$img = base_url().'/assets/plugins/images/'.$_FILES['image']['name'];
+			$img = $_FILES['image']['name'];
 
 			$data = array(
 					'nama' => $_POST['nama'],
@@ -39,7 +39,6 @@
 		public function upData($data, $id)
 		{
 			$data = array(
-				//'imageurl' => $img,
 				'nama' => $_POST['nama'],
 				'tipe' => $_POST['tipe'],
 				'status' => $_POST['status'],
