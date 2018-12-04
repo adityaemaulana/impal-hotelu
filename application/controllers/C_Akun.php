@@ -20,7 +20,11 @@
 				$data = $this->input->post(null,TRUE);
 				$login = $this->M_Login->check($data);
 				if ($login){
-					$this->session->set_userdata('email',$login->email);
+					$data = array(
+						'email' => $login->email,
+						'username' => $login->username
+					);
+					$this->session->set_userdata($data);
 					redirect('C_Profile/index');
 				} else{
 					$this->session->set_flashdata('message','Error Login');

@@ -5,9 +5,6 @@
 		<link rel="icon" type="image/png'?>" sizes="16x16" href="<?php echo base_url().'/assets/plugins/images/admin-logo-hotelu.png'?>">
 	</head>
 	<body>
-		<div class="container gambar">
-			<img class="coverBg" src="<?php echo base_url();?>assets/image/backhotel.png">	
-		</div>
 		
 		<div class="container">
 			

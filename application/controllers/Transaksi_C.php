@@ -3,10 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Transaksi_C extends CI_Controller {
 
-	public function index()
+	public function index($id)
 	{
+		$this->load->model('Kamar_M');
+		$data['data'] = $this->Kamar_M->getKamarData($id);
 		$this->load->view('navlogout');
-		$this->load->view('transaksi');
+		$this->load->view('transaksi', $data);
 		$this->load->view('footer');
-    }
+	}
+	
+	public function input()
+	{
+		$this->load->model('Transaksi_M');
+		$data = $this->session->flashdata();
+		echo '<div>'.$data['transaksi']['id'].'</div>';
+		$this->Transaksi_M->input($data);
+		redirect('C_Kamar');
+	}
 }

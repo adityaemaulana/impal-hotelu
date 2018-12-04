@@ -11,13 +11,6 @@ $(document).ready(function() {
 		$(activePage).fadeIn();
 	});
 
-	$("#nextB").click(function() {
-		$("div.content > div").hide();
-		$("#navB").removeClass("active");
-		$("#navR").addClass("active");
-		$("#pembayaran").fadeIn();
-	});
-
 	$("#nextR").click(function() {
 		$("div.content > div").hide();
 		$("#navR").removeClass("active");
@@ -29,6 +22,6 @@ $(document).ready(function() {
 		$("div.content > div").hide();
 		$("#navP").removeClass("active");
 		$("#navS").addClass("active");
-		$("#pembayaran").fadeIn();
+		$("#selesai").fadeIn();
 	});
 });

@@ -15,5 +15,22 @@
 			$query = $this->db->get();
 			return $query->result();
         }
+
+        public function input($data)
+        {
+            $dt = $data['transaksi'];
+            $data = array(
+                'id' => $dt['id'],
+                'username' => $dt['username'],
+                'idkamar' => $dt['idkamar'],
+                'durasi' => $dt['durasi'],
+                'totalbayar' => $dt['totalbayar'],
+                'jenis' => $dt['jenis'],
+                'status' => $dt['status'],
+                'tanggal' => $dt['tanggal']
+            );
+
+            $this->db->insert(self::TABLE, $data);
+        }
     }
 ?>

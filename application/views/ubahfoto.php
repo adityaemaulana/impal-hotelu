@@ -5,10 +5,6 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/profil.css">
 	</head>
 	<body>
-		<div class="container ">
-			<img class="coverBg" src="<?php echo base_url();?>assets/image/backhotel.png">	
-		</div>
-		
 		<?=form_open_multipart('C_Profile/ubah')?>
 		<div class="col-md-12">
 		<?php foreach ($mmbr as $custom) {?>

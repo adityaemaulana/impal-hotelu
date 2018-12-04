@@ -7,15 +7,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container-fluid p-0">
-            <img src="<?php echo base_url();?>assets/image/backhotel.png" width=100% height=500px>
-        </div>
 
         <ul class="nav nav-details mb-5">
             <div class="container">
                 <div class="row">
                     <li class="nav-item col-md-4 my-2 active" id="navR">
-                        <a href="#rincian" class="text-center nav-link nav-details-link active">1. Rincian Anda</a>
+                        <a href="#rincian" class="text-center nav-link nav-details-link active  ">1. Rincian Anda</a>
                     </li>
                     <li class="nav-item col-md-4 my-2" id="navP">
                         <a href="#pembayaran" class="text-center nav-link nav-details-link">2. Pembayaran</a>
@@ -38,7 +35,7 @@
                         <div class="row float-right">
                             <div class="col-md-6">
                                 <a class="rincian-label">ID Pesanan</a><br>
-                                <a class="rincian-label">1 Deluxe Room Only</a><br>
+                                <a class="rincian-label"><?php echo $data[0]->tipe?></a><br>
                                 <a class="rincian-label">1 Malam 1 Dewasa</a><br>
                                 <a class="rincian-label">Check-in</a><br>
                                 <a class="rincian-value">Fri, 20 April 2018</a><br>
@@ -46,11 +43,11 @@
                                 <a class="rincian-label">Biaya Pelayanan</a><br>
                             </div>
                             <div class="col-md-6">
-                                <a class="rincian-label">A1003EIU</a><br>
+                                <a class="rincian-label"><?php $id = uniqid(); echo $id?></a><br>
                                 <br><br>
                                 <a class="rincian-label">Check-out</a><br>
                                 <a class="rincian-value">Sat, 21 April 2018</a><br>
-                                <a class="rincian-value">IDR 650.000</a><br>
+                                <a class="rincian-value">IDR <?php echo $data[0]->harga?></a><br>
                                 <a class="rincian-value">Gratis</a><br>
                             </div>
                             <div class="col-md-11">
@@ -92,14 +89,28 @@
                                         </div>
                                         <div class="col-md-6">
                                             <p class="rincian-value">7000844328712</p>
-                                            <p class="rincian-value">Rp 650.000</p>
+                                            <p class="rincian-value"><?php echo $data[0]->harga?></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <a id="nextR" role="button" class="btn btn-success mx-auto mt-3" style="color:white;font-weight:600;width:100%">NEXT</a>
+                            <?php
+                                $transaksi = array(
+                                    'id' => $id,
+                                    'username' => $this->session->userdata('username'),
+                                    'idkamar' => $data[0]->id,
+                                    'durasi' => 2,
+                                    'totalbayar' => $data[0]->harga,
+                                    'jenis' => 'Virtual BCA',
+                                    'status' => 'dipesan',
+                                    'tanggal' => date('Y-m-d')
+                                );
+                                $this->session->set_flashdata('transaksi', $transaksi);
+                                $this->session->set_userdata('query', 'success');
+                            ?>
+                            <a id="nextP" href="<?php echo site_url('Transaksi_C/input/')?>" role="button" class="btn btn-success mx-auto mt-3" style="color:white;font-weight:600;width:100%">NEXT</a>
                         </div>
                     </div>                
                 </div>
@@ -110,5 +121,6 @@
         <script src="<?php echo base_url().'/assets/plugins/bower_components/jquery/dist/jquery.min.js'?>"></script>
         <!-- Custom JS -->
         <script src="<?php echo base_url().'assets/js/transaksi.js'?>"></script>
+        
     </body>
 </html>

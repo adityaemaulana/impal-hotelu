@@ -7,8 +7,9 @@
 	text-align: left;
 }
 
-.footer h5{
+.footer h4{
 	color: #0BB59D;
+	font-weight:600;
 	font-family: Arial Rounded MT Bold;
 }
 		

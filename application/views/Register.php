@@ -1,10 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/regis.css">
 <body>
-	
-	<div class="container ">
-		<img class="coverBg" src="<?php echo base_url();?>assets/image/backhotel.png">	
-	</div>
-	
 	<div class="container">
 		
 		
@@ -40,8 +35,7 @@
 					<input class="form-control" type="text" name="umur" placeholder="Age is just a number" />
         		</div>
 			
-			</div>
-			
+			</div>		
 			
 			<div class="col-md-5 my-auto mx-auto">
 				<h3 class="text-center">Register To HotelU</h3>
@@ -53,8 +47,6 @@
           			</p>
 				</center>
 			</div>
-			
-			
 			</form>
 			</div>
 		</div>

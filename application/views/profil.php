@@ -6,12 +6,7 @@
     </head>
     <body>
         
-        <div class="container ">
-            <img class="coverBg" src="<?php echo base_url();?>assets/image/backhotel.png">	
-        </div>
-        
         <div class="container">
-            
             <div class="row">
                 <?php
                 foreach ($mmbr as $custom) {?>
@@ -27,6 +22,7 @@
                     </div>
                 
                 </div>
+
                 <div id="edit<?php echo $custom->email; ?>" class="modal fade" role="dialog">
                             <div class="modal-dialog">
                                 <div class="modal-content">

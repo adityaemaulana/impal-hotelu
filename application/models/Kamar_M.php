@@ -7,7 +7,6 @@
 			$img = base_url().'/assets/plugins/images/'.$_FILES['image']['name'];
 
 			$data = array(
-					//'imageurl' => $img,
 					'nama' => $_POST['nama'],
 					'tipe' => $_POST['tipe'],
 					'status' => $_POST['status'],
@@ -20,6 +19,13 @@
 		
 		public function getData()
 		{
+			$query = $this->db->get(self::TABLE);
+			return $query->result();
+		}
+
+		public function getKamarData($id)
+		{
+			$this->db->where('id', $id);
 			$query = $this->db->get(self::TABLE);
 			return $query->result();
 		}
