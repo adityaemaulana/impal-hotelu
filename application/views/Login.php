@@ -3,9 +3,13 @@
 		<link rel="stylesheet" type="text/css" href= "<?php echo base_url();?>assets/css/loginn.css">
 		<title>Hotelu - Hotel Management System</title>
 		<link rel="icon" type="image/png'?>" sizes="16x16" href="<?php echo base_url().'/assets/plugins/images/admin-logo-hotelu.png'?>">
+		<!-- SweetAlert-->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.min.css"></script>
+		<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 	</head>
 	<body>
-		
 		<div class="container">
 			
 			<h3 class="text-center">Login To HotelU</h3>

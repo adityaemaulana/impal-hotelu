@@ -4,6 +4,7 @@
 			public function __construct(){
 				parent:: __construct();
 				$this->load->model('M_Login');
+				$this->load->model('Staff_M');
 			}
 			
 			public function index(){
@@ -19,14 +20,24 @@
 			public function check(){
 				$data = $this->input->post(null,TRUE);
 				$login = $this->M_Login->check($data);
-				if ($login){
+				$admin = $this->Staff_M->isAdmin($data);
+				
+				if($admin){
+					$data = array(
+						'email' => $login['email'],
+						'username' => $login['username']
+					);
+					$this->session->set_flashdata('admin', 'bener');
+					$this->session->set_userdata($data);
+					redirect('MDashboard_C');
+				}else if ($login){	
 					$data = array(
 						'email' => $login->email,
 						'username' => $login->username
 					);
 					$this->session->set_userdata($data);
 					redirect('C_Profile/index');
-				} else{
+				}else{
 					$this->session->set_flashdata('message','Error Login');
 					redirect('C_Akun/index');
 				}

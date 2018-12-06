@@ -76,7 +76,7 @@
                             <b class="hidden-xs">AdityaEM</b>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="<?php echo site_url('C_Akun')?>">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

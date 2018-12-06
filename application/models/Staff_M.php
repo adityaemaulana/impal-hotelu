@@ -47,5 +47,17 @@
 			$this->db->where('id', $id);
 			$this->db->update(self::TABLE, $data);
 		}
+
+		public function isAdmin($data){
+			$this->db->where('username', $data['email']);
+			$this->db->where('password', $data['password']);
+			$query = $this->db->get('staff');
+
+			if($query->num_rows() == 1){
+				return $query->row(0);
+			}else{
+				return false;
+			}
+		}
     }
 ?>

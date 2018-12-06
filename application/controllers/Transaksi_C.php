@@ -16,8 +16,8 @@ class Transaksi_C extends CI_Controller {
 	{
 		$this->load->model('Transaksi_M');
 		$data = $this->session->flashdata();
-		echo '<div>'.$data['transaksi']['id'].'</div>';
 		$this->Transaksi_M->input($data);
+		$this->session->set_userdata('query', 'success');
 		redirect('C_Kamar');
 	}
 }

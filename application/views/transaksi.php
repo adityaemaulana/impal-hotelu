@@ -108,7 +108,6 @@
                                     'tanggal' => date('Y-m-d')
                                 );
                                 $this->session->set_flashdata('transaksi', $transaksi);
-                                $this->session->set_userdata('query', 'success');
                             ?>
                             <a id="nextP" href="<?php echo site_url('Transaksi_C/input/')?>" role="button" class="btn btn-success mx-auto mt-3" style="color:white;font-weight:600;width:100%">NEXT</a>
                         </div>

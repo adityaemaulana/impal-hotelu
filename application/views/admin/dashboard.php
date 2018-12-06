@@ -28,6 +28,12 @@
     <link href="<?php echo base_url().'/assets/css/colors/default.css'?>" id="theme" rel="stylesheet">
     <!-- my custom CSS -->
     <link href="<?php echo base_url().'/assets/css/admin-style.css'?>" id="theme" rel="stylesheet">
+
+    <!-- SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.min.css"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,6 +43,10 @@
 </head>
 
 <body class="fix-header">
+    <?php if($this->session->flashdata('admin') != ''){
+        echo '<script> swal("Welcome to Admin Page!") </script>';
+    }?>
+
     <!-- ============================================================== -->
     <!-- Preloader -->
     <!-- ============================================================== -->
@@ -76,7 +86,7 @@
                             <b class="hidden-xs">AdityaEM</b>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="<?php echo site_url('C_Akun')?>">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

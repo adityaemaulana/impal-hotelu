@@ -69,7 +69,7 @@
                             <b class="hidden-xs">AdityaEM</b>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="<?php echo site_url('C_Akun')?>">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -139,6 +139,7 @@
                                             <th>No.</th>
                                             <th>Nama</th>
                                             <th>Username</th>
+                                            <th>Email</th>
                                             <th>Jenis Kelamin</th>
                                             <th>Umur</th>
                                             <th>Action</th>
@@ -150,9 +151,10 @@
                                                 <td><?php echo $i?></td>
                                                 <td><?php echo $item->nama?></td>
                                                 <td><?php echo $item->username?></td>
+                                                <td><?php echo $item->email?></td>
                                                 <td><?php echo $item->jeniskelamin?></td>
                                                 <td><?php echo $item->umur?></td>
-                                                <td><a class="btn btn-danger" title="Hapus Data" href="<?php echo site_url('MStaff_C/delete/'.$item->username)?>"><i class="fa fa-trash-o"></i></a></td>
+                                                <td><a class="btn btn-danger" title="Hapus Data" onclick="return confirmed('<?php echo site_url('MStaff_C/delete/'.$item->username)?>')"><i class="fa fa-trash-o"></i></a></td>
                                             </tr>
                                         <?php } ?>
                                     </tbody>
@@ -264,6 +266,35 @@
     <script src="<?php echo base_url().'/assets/js/waves.js'?>"></script>
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url().'/assets/js/custom.min.js'?>"></script>
+    <!-- SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.min.css"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script>
+        function confirmed(url){
+            Swal({
+                title: 'Anda yakin ingin menghapus data?',
+                text: "data tidak dapat dikembalikan",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                if (result.value) {
+                    location.href=url;
+                    Swal(
+                    'Deleted!',
+                    'Data telah dihapus',
+                    'success'
+                    )
+                }else{
+                    return false;
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>

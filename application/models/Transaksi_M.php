@@ -12,7 +12,7 @@
                      ->join(self::TABLE, 'tamu.username = transaksi.username')
                      ->join(self::TABLE2, 'transaksi.idkamar = kamar.id');
 
-			$query = $this->db->get();
+            $query = $this->db->get();
 			return $query->result();
         }
 
