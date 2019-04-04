@@ -105,9 +105,6 @@
                 <?php } ?>
             </div>
         </div>
-        
-        
-        
     </body>
     <?php 
     //$this->load->view('footer'); 

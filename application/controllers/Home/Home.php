@@ -3,7 +3,9 @@
 
 	public function index()
 	{
+		$this->load->view('navlogout');
 		$this->load->view('home/home');
+		$this->load->view('footer');
 	}
 }
 ?>

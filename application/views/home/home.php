@@ -1,12 +1,14 @@
 <?php
-$this->load->view('home/header');
+// $this->load->view('home/header');
 ?>
+<html>
+	<head>
+		<title>Hotelu - Hotel Management System</title>
+		<link rel="icon" type="image/png'?>" sizes="16x16" href="<?php echo base_url().'/assets/plugins/images/admin-logo-hotelu.png'?>">
+	</head>
 	<body>
-		<?php
-		$this->load->view('home/navbar');
-		?>
-		
-		<Image Carousel>
+
+		<Image Carousel>Home
 		
 				<img class="banner-images" src="<?php echo base_url(); ?>assets/images/Capture.png	">
 				<img class="banner-images" src="<?php echo base_url(); ?>assets/images/banner-image-1.jpg">
@@ -42,7 +44,7 @@ $this->load->view('home/header');
 			</div>
 		</div>
 
-		<!--Footer-->
+		<!-- Footer
 		<div class="container-fluid bg-dark" id="main-footer">
 			<div class="row mx-5 py-3">
 				<div class="col-xs-4 w-50 text-right pr-3">
@@ -54,7 +56,10 @@ $this->load->view('home/header');
 					&copy; HotelU 2018. All rights reserved.
 				</div>
 			</div>
-		</div>
+		</div> -->
+	</body>
+</html>
+	
 <?php
-$this->load->view('home/footer');
+// $this->load->view('home/footer');
 ?>
